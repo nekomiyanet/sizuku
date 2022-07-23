@@ -59,9 +59,9 @@ export default class extends Module {
 			['美術館に置いてそうなもの', 'みなさんは、この中で美術館に置いてありそうなものはどれだと思いますか？'],
 			['教室にありそうなもの', 'みなさんは、教室にありそうなものってどれだと思いますか？'],
 			['絵文字になってほしいもの', '絵文字になってほしいものはどれですか？'],
-			['Misskey本部にありそうなもの', 'みなさんは、Misskey本部にありそうなものはどれだと思いますか？'],
+			['えとねるん本部にありそうなもの', 'みなさんは、えとねるん本部にありそうなものはどれだと思いますか？'],
 			['燃えるゴミ', 'みなさんは、どれが燃えるゴミだと思いますか？'],
-			['好きなおにぎりの具', 'みなさんの好きなおにぎりの具はなんですか？'],
+			['好きなサンドイッチの具', 'みなさんの好きなサンドイッチの具はなんですか？'],
 		];
 
 		const poll = polls[Math.floor(Math.random() * polls.length)];
@@ -125,7 +125,7 @@ export default class extends Module {
 
 		if (mostVotedChoice.votes === 0) {
 			this.ai.post({ // TODO: Extract serif
-				text: '投票はありませんでした',
+				text: '投票はありませんでした...残念です:crying_ai:',
 				renoteId: noteId,
 			});
 		} else if (mostVotedChoices.length === 1) {
